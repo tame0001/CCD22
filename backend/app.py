@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_restful  import Api
+from flask_cors import CORS
+
 from demo import DemoAPI
 from field import FieldAPI
 from operation import OperationAPI
@@ -9,6 +11,7 @@ from operation_date import OperationDateAPI
 # using csv files to keep information for now. No time to create te database
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 api.add_resource(DemoAPI, '/')

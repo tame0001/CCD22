@@ -35,7 +35,7 @@ class FieldOperationAPI(Resource):
             'field': field, 
             'operation': operation,
             'time': time,
-            'detail': args['detail'] if args['detail'] else None
+            'detail': args['detail'] if args['detail'] else ''
             }, ignore_index=True)
         df.to_csv(file_name, index=False)
 
