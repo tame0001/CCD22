@@ -1,0 +1,3 @@
+flask==1.1.4
+flask-RESTful==0.3.9
+Werkzeug==1.0.1
