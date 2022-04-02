@@ -3,6 +3,8 @@
       <thead>
           <tr>
               <th>Field</th>
+              <th>Address</th>
+              <th>Area</th>
               <th>Operation</th>
               <th>Time</th>
               <th>Detail</th>
@@ -11,6 +13,8 @@
       <tbody>
           <tr *ngFor="let data of allData">
               <td>{{ data.field  | titlecase}}</td>
+              <td>{{ data.address }}</td>
+              <td>{{ data.area}}</td>
               <td>{{ data.operation | titlecase}}</td>
               <td>{{ data.time | date: 'fullDate' }}</td>
               <td>{{ data.detail | titlecase}}</td>

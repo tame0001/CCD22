@@ -27,6 +27,8 @@ export class AppComponent implements OnInit{
 
 export interface FieldOperationData {
   field: string;
+  address: string;
+  area: string;
   operation: string;
   time: Date;
   detail: string;

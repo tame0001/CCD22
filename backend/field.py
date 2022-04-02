@@ -9,7 +9,9 @@ class FieldAPI(Resource):
         for index, row in df.iterrows():
             payload.append({
                 'id': index,
-                'field_name': row['name']
+                'field_name': row['name'],
+                'address': row['address'],
+                'area': str(row['area'])
             })
         
         return payload
@@ -39,7 +41,9 @@ class FieldAPI(Resource):
         id = int(args['id'])
         new_name = args['name']
         df = pd.read_csv(file_name)
+        print()
         df.loc[id]['name'] = new_name
+        print(df)
         df.to_csv(file_name, index=False)
 
         return {

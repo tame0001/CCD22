@@ -8,9 +8,12 @@ class FieldOperationAPI(Resource):
         operation = pd.read_csv('operation.csv')
         field_operation = pd.read_csv('field_operation.csv')
         payload = []
+        print(field)
         for index, row in field_operation.iterrows():
             payload.append({
                 'field': field.loc[row['field']]['name'],
+                'address': field.loc[row['field']]['address'],
+                'area': str(field.loc[row['field']]['area']),
                 'operation': operation.loc[row['operation']]['name'],
                 'time': row['time'],
                 'detail': row['detail']
