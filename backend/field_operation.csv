@@ -2,3 +2,5 @@ field,operation,time,detail
 0,0,2022-04-02,corn
 1,3,2022-05-02, 
 2,1,2022-06-02,water
+5,1,2022-07-02,water
+8,0,2022-05-15,soybean

@@ -41,9 +41,7 @@ class FieldAPI(Resource):
         id = int(args['id'])
         new_name = args['name']
         df = pd.read_csv(file_name)
-        print()
-        df.loc[id]['name'] = new_name
-        print(df)
+        df.at[id, 'name'] = new_name
         df.to_csv(file_name, index=False)
 
         return {
